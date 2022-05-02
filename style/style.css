@@ -1,0 +1,109 @@
+body {
+  font-family: "Roboto", sans-serif;
+  margin-top: 40px;
+  padding: 100px 200px 100px 100px;
+  background: linear-gradient(
+    180.3deg,
+    rgb(110, 136, 161) 5%,
+    rgb(221, 221, 221) 95%
+  );
+}
+
+h1 {
+  font-size: 50px;
+}
+
+input {
+  margin-top: 50px;
+}
+
+hr {
+  width: 65%;
+}
+
+a:hover {
+  text-decoration: underline;
+  color: #a5c8e8;
+}
+.card-body {
+  padding: 50px 0px 50px 138px;
+  background-color: #738ca4;
+  border: none;
+  border-radius: 5%;
+}
+
+.card {
+  border-radius: 5%;
+  border: none;
+}
+
+.search-bar {
+  margin-left: 20px;
+}
+
+.search-button {
+  border-radius: 5%;
+}
+
+.btn-info {
+  margin: 10px;
+  padding: 10px;
+  background-color: #d7d8d9;
+  color: black;
+  border-color: black;
+  border-radius: 20px;
+  box-shadow: 10px 10px 20px #3e4c5a;
+}
+
+.btn-info:hover {
+  background-color: #537791;
+  border-color: #fff;
+  color: #fff;
+  transition-duration: 200ms;
+}
+
+.city {
+  margin: 40px;
+  width: fit-content;
+  block-size: fit-content;
+}
+
+.units {
+  text-decoration: none;
+  font-weight: 300;
+  font-size: 20px;
+  color: #23537f;
+  float: top, right;
+  padding: 2px;
+}
+
+.temperature {
+  margin-left: 40px;
+  float: left;
+}
+
+.today {
+  padding: 20px 20px 5px 20px;
+  text-align: center;
+  margin: 0;
+  color: #2a4055;
+}
+.date-Time {
+  padding: 5px 20px 20px 20px;
+  text-align: center;
+  color: #a5c8e8;
+}
+
+.temp-description {
+  text-align: center;
+  color: #2a4055;
+}
+
+.forecast {
+  text-align: center;
+  color: #2a4055;
+}
+
+.col-1 {
+  margin: 10px;
+}
