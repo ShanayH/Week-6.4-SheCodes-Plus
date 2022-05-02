@@ -107,3 +107,8 @@ a:hover {
 .col-1 {
   margin: 10px;
 }
+
+.nametag {
+  margin-left: 60px;
+  font-size: 15px;
+}
