@@ -102,11 +102,24 @@ a:hover {
 .temp-description {
   text-align: center;
   color: #2a4055;
+  font-style: italic;
 }
 
 .forecast {
   text-align: center;
   color: #2a4055;
+}
+
+.humidity {
+  text-align: center;
+  color: #2a4055;
+  font-size: 15px;
+}
+
+.wind {
+  text-align: center;
+  color: #2a4055;
+  font-size: 15px;
 }
 
 .col-1 {

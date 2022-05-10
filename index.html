@@ -39,6 +39,7 @@
               class="search-button"
               id="search-button"
             />
+
             <button type="button" class="btn btn-info">
               Use Current Location
             </button>
@@ -56,7 +57,15 @@
 
           <div class="row">
             <div class="col-4">
-              <h1 class="temperature" id="temperature">🌦️-4</h1>
+              <h1 class="temperature" id="temperature">
+                <img
+                  src="http://openweathermap.org/img/wn/10d@2x.png"
+                  alt="weather icon"
+                  width="60px"
+                  class="float-left"
+                  id="weather-emoji"
+                />-4
+              </h1>
               <h1>
                 <span class="units">
                   <a href="#" class="units" id="celsius">°C </a> |
@@ -67,6 +76,13 @@
             <div class="col-4">
               <h4 class="temp-description" id="temp-description">Cloudy</h4>
               <h4 class="forecast" id="forecast">-1 | -10</h4>
+
+              <h4 class="humidity">
+                Humidity: <span class="humidity" id="humidity">50</span>%
+              </h4>
+              <h4 class="wind">
+                Wind speed: <span class="wind" id="wind">5</span> km/h
+              </h4>
             </div>
           </div>
           <br />

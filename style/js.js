@@ -80,6 +80,9 @@ let units = "metric";
 let apiKey = "2f4a61b0876133218968273ba29696cf";
 
 function showTemp(response) {
+  let iconElement = document.querySelector("#weather-emoji");
+  iconElement.innerHTML = `http://openweathermap.org/img/wn/10d@2x.png`;
+
   let Temp = Math.round(response.data.main.temp);
   let tempResult = document.querySelector("#temperature");
   tempResult.innerHTML = `${Temp}`;
@@ -91,6 +94,12 @@ function showTemp(response) {
   forecast.innerHTML = `${Math.round(
     response.data.main.temp_max
   )} | ${Math.round(response.data.main.temp_min)}`;
+
+  let humidityElement = document.querySelector("#humidity");
+  humidityElement.innerHTML = response.data.main.humidity;
+
+  let windElement = document.querySelector("#wind");
+  windElement.innerHTML = Math.round(response.data.wind.speed);
 }
 
 //display the current position when button is clicked
@@ -101,7 +110,7 @@ function showPosition(position) {
   currentCity.innerHTML = `${lat}, ${lon}`;
 }
 
-//find current
+//find current location
 function getCurrentPosition(event) {
   event.preventDefault;
   navigator.geolocation.getCurrentPosition(showPosition);
@@ -116,8 +125,7 @@ currentLocationButton.addEventListener("click", getCurrentPosition);
 function currentPosition(position) {
   let lat = position.coords.latitude;
   let lon = position.coords.longitude;
-  console.log(lat);
-  console.log(lon);
+
   let findLocation = `https://api.openweathermap.org/data/2.5/weather?lat=${lat}&lon=${lon}&appid=${apiKey}&units=${units}`;
   axios.get(findLocation).then(showTemp);
 }
