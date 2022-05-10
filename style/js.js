@@ -81,7 +81,10 @@ let apiKey = "2f4a61b0876133218968273ba29696cf";
 
 function showTemp(response) {
   let iconElement = document.querySelector("#weather-emoji");
-  iconElement.innerHTML = `http://openweathermap.org/img/wn/10d@2x.png`;
+  iconElement.setAttribute(
+    "src",
+    `http://openweathermap.org/img/wn/10d@2x.png`
+  );
 
   let Temp = Math.round(response.data.main.temp);
   let tempResult = document.querySelector("#temperature");
