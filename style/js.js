@@ -92,6 +92,8 @@ function showTemp(response) {
   );
   console.log(response.data.weather[0].icon);
 
+  iconElement.setAttribute("alt", response.data.weather[0].description);
+
   let description = document.querySelector("#temp-description");
   description.innerHTML = response.data.weather[0].description;
 
