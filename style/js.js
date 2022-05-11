@@ -84,12 +84,13 @@ function showTemp(response) {
   let tempResult = document.querySelector("#temperature");
   tempResult.innerHTML = `${Temp}`;
 
-  let iconElement = document.querySelector("#temperature");
+  let iconElement = document.querySelector("#icon");
 
   iconElement.setAttribute(
     "src",
-    `http://openweathermap.org/img/wn/01n@2x.png`
+    `http://openweathermap.org/img/wn/${response.data.weather[0].icon}@2x.png`
   );
+  console.log(response.data.weather[0].icon);
 
   let description = document.querySelector("#temp-description");
   description.innerHTML = response.data.weather[0].description;
