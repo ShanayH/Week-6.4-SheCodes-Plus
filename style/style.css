@@ -83,8 +83,9 @@ a:hover {
 }
 
 .temperature {
-  margin-left: 40px;
-  float: left;
+  margin-left: 10px;
+  font-size: 50px;
+  display: inline-block;
 }
 
 .today {

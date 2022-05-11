@@ -80,15 +80,16 @@ let units = "metric";
 let apiKey = "2f4a61b0876133218968273ba29696cf";
 
 function showTemp(response) {
-  let iconElement = document.querySelector("#weather-emoji");
-  iconElement.setAttribute(
-    "src",
-    `http://openweathermap.org/img/wn/10d@2x.png`
-  );
-
   let Temp = Math.round(response.data.main.temp);
   let tempResult = document.querySelector("#temperature");
   tempResult.innerHTML = `${Temp}`;
+
+  let iconElement = document.querySelector("#temperature");
+
+  iconElement.setAttribute(
+    "src",
+    `http://openweathermap.org/img/wn/01n@2x.png`
+  );
 
   let description = document.querySelector("#temp-description");
   description.innerHTML = response.data.weather[0].description;
