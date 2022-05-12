@@ -60,11 +60,10 @@ let units = "metric";
 let apiKey = "2f4a61b0876133218968273ba29696cf";
 
 function showTemp(response) {
-  let Temp = Math.round(response.data.main.temp);
+  celsiusTemperature = Math.round(response.data.main.temp);
+  let Temp = celsiusTemperature;
   let tempResult = document.querySelector("#temperature");
   tempResult.innerHTML = `${Temp}`;
-
-  let celsiusTemperature = Math.round(response.data.main.temp);
 
   let iconElement = document.querySelector("#icon");
 
@@ -72,7 +71,6 @@ function showTemp(response) {
     "src",
     `http://openweathermap.org/img/wn/${response.data.weather[0].icon}@2x.png`
   );
-  console.log(response.data.weather[0].icon);
 
   iconElement.setAttribute("alt", response.data.weather[0].description);
 
@@ -130,7 +128,16 @@ function showFahrenheit(event) {
   temperatureElement.innerHTML = Math.round(fahrenheitTemperature);
 }
 
+function showCelsius(event) {
+  event.preventDefault();
+  let temperatureElement = document.querySelector("#temperature");
+  temperatureElement.innerHTML = Math.round(celsiusTemperature);
+}
+
 let celsiusTemperature = null;
 
 let fahrenheit = document.querySelector("#fahrenheit");
 fahrenheit.addEventListener("click", showFahrenheit);
+
+let celsius = document.querySelector("#celsius");
+celsius.addEventListener("click", showCelsius);

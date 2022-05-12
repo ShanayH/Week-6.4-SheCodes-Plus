@@ -25,6 +25,7 @@ a:hover {
   text-decoration: underline;
   color: #a5c8e8;
 }
+
 .card-body {
   padding: 50px 0px 50px 138px;
   background-color: #738ca4;
@@ -77,10 +78,15 @@ a:hover {
   text-decoration: none;
   font-weight: 300;
   font-size: 20px;
-  color: #23537f;
+  color: red 
+  /* color: #23537f; */
   float: top, right;
   padding: 2px;
 }
+
+/* .active {
+  color: red;
+} */
 
 .temperature {
   margin-left: 10px;
