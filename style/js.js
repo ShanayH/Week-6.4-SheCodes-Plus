@@ -35,26 +35,6 @@ let theMonth = months[now.getMonth()];
 let currentDateTime = document.querySelector("#currentDate");
 currentDateTime.innerHTML = `${theDay} ${theMonth} ${date} | ${hours}:${minutes}`;
 
-//make the °C and °F buttons work
-
-function tempC(event) {
-  event.preventDefault();
-  let tempCelsius = document.querySelector("#temperature");
-  tempCelsius.innerHTML = "🌦️-4";
-}
-
-let celsius = document.querySelector("#celsius");
-celsius.addEventListener("click", tempC);
-
-function tempT(event) {
-  event.preventDefault();
-  let tempFahrenheit = document.querySelector("#temperature");
-  tempFahrenheit.innerHTML = "🌦️25";
-}
-
-let Fahrenheit = document.querySelector("#fahrenheit");
-Fahrenheit.addEventListener("click", tempT);
-
 //change h1 to the city that has been searched for
 
 function search(event) {
@@ -83,6 +63,8 @@ function showTemp(response) {
   let Temp = Math.round(response.data.main.temp);
   let tempResult = document.querySelector("#temperature");
   tempResult.innerHTML = `${Temp}`;
+
+  let celsiusTemperature = Math.round(response.data.main.temp);
 
   let iconElement = document.querySelector("#icon");
 
@@ -138,3 +120,17 @@ function currentPosition(position) {
 }
 
 navigator.geolocation.getCurrentPosition(currentPosition);
+
+//make the °F buttons work
+
+function showFahrenheit(event) {
+  event.preventDefault();
+  let fahrenheitTemperature = (celsiusTemperature * 9) / 5 + 32;
+  let temperatureElement = document.querySelector("#temperature");
+  temperatureElement.innerHTML = Math.round(fahrenheitTemperature);
+}
+
+let celsiusTemperature = null;
+
+let fahrenheit = document.querySelector("#fahrenheit");
+fahrenheit.addEventListener("click", showFahrenheit);
