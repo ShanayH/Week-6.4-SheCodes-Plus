@@ -141,6 +141,10 @@ a:hover {
   font-size: 15px;
 }
 
-.weekdays {
+.forecast-day {
   color: #2a4055;
+}
+
+.forecast-max {
+  color: #a5c8e8;
 }
