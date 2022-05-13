@@ -19,10 +19,10 @@ input {
 
 hr {
   width: 65%;
+  color: #a5c8e8;
 }
 
 a:hover {
-  text-decoration: underline;
   color: #a5c8e8;
 }
 
@@ -72,15 +72,19 @@ a:hover {
   margin: 40px;
   width: fit-content;
   block-size: fit-content;
+  text-transform: capitalize;
 }
 
 .weather-icon .units {
   font-weight: 300;
-  font-size: 20px;
+  font-size: 15px;
   float: top, right;
   padding: 2px;
 }
 
+#fahrenheit {
+  text-decoration: none;
+}
 .active {
   text-decoration: none;
   color: black;
@@ -134,4 +138,8 @@ a:hover {
 .nametag {
   margin-left: 60px;
   font-size: 15px;
+}
+
+.weekdays {
+  color: #2a4055;
 }
