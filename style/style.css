@@ -18,6 +18,7 @@ input {
 }
 
 hr {
+  border-top: 7px solid;
   width: 65%;
   color: #a5c8e8;
 }
