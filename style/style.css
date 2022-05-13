@@ -74,19 +74,17 @@ a:hover {
   block-size: fit-content;
 }
 
-.units {
-  text-decoration: none;
+.weather-icon .units {
   font-weight: 300;
   font-size: 20px;
-  color: red 
-  /* color: #23537f; */
   float: top, right;
   padding: 2px;
 }
 
-/* .active {
-  color: red;
-} */
+.active {
+  text-decoration: none;
+  color: black;
+}
 
 .temperature {
   margin-left: 10px;
