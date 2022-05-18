@@ -35,6 +35,8 @@ let theMonth = months[now.getMonth()];
 let currentDateTime = document.querySelector("#currentDate");
 currentDateTime.innerHTML = `${theDay} ${theMonth} ${date} | ${hours}:${minutes}`;
 
+
+
 //format the date for the forecast
 function formatDay(timestamp) {
   let date = new Date(timestamp * 1000);
