@@ -35,8 +35,6 @@ let theMonth = months[now.getMonth()];
 let currentDateTime = document.querySelector("#currentDate");
 currentDateTime.innerHTML = `${theDay} ${theMonth} ${date} | ${hours}:${minutes}`;
 
-
-
 //format the date for the forecast
 function formatDay(timestamp) {
   let date = new Date(timestamp * 1000);
@@ -210,6 +208,15 @@ function showCelsius(event) {
 }
 
 let celsiusTemperature = null;
+
+function handleSubmit(event) {
+  event.preventDefault();
+  let searchElement = document.querySelector("#search-bar");
+  search(searchElement.value);
+}
+
+let form = document.querySelector("#search-form");
+form.addEventListener("submit", handleSubmit);
 
 let fahrenheit = document.querySelector("#fahrenheit");
 fahrenheit.addEventListener("click", showFahrenheit);

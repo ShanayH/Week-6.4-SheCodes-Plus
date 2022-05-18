@@ -147,4 +147,6 @@ a:hover {
 
 .forecast-max {
   color: #a5c8e8;
+  display: block;
+  margin: 0 auto;
 }
