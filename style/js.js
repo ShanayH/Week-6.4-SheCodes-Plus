@@ -35,6 +35,7 @@ let theMonth = months[now.getMonth()];
 let currentDateTime = document.querySelector("#currentDate");
 currentDateTime.innerHTML = `${theDay} ${theMonth} ${date} | ${hours}:${minutes}`;
 
+
 //change h1 to the city that has been searched for
 
 function search(event) {
