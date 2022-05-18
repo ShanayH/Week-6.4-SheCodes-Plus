@@ -86,10 +86,10 @@ a:hover {
 #fahrenheit {
   text-decoration: none;
 }
-.active {
+/* .active {
   text-decoration: none;
   color: black;
-}
+} */
 
 .temperature {
   margin-left: 10px;

@@ -188,26 +188,35 @@ function currentPosition(position) {
 
 navigator.geolocation.getCurrentPosition(currentPosition);
 
-//make the °F buttons work
+// //make the °F buttons work
 
-function showFahrenheit(event) {
-  event.preventDefault();
-  let fahrenheitTemperature = (celsiusTemperature * 9) / 5 + 32;
-  celsius.classList.remove("active");
-  fahrenheit.classList.add("active");
-  let temperatureElement = document.querySelector("#temperature");
-  temperatureElement.innerHTML = Math.round(fahrenheitTemperature);
-}
+// function showFahrenheit(event) {
+//   event.preventDefault();
+//   let fahrenheitTemperature = (celsiusTemperature * 9) / 5 + 32;
+//   celsius.classList.remove("active");
+//   fahrenheit.classList.add("active");
+//   let temperatureElement = document.querySelector("#temperature");
+//   temperatureElement.innerHTML = Math.round(fahrenheitTemperature);
+// }
 
-function showCelsius(event) {
-  event.preventDefault();
-  celsius.classList.add("active");
-  fahrenheit.classList.remove("active");
-  let temperatureElement = document.querySelector("#temperature");
-  temperatureElement.innerHTML = Math.round(celsiusTemperature);
-}
+// //make celsius link active each time search is clicked.
 
-let celsiusTemperature = null;
+// function resetUnits() {
+//   document.querySelector("#celsius").classList.add("active");
+//   document.querySelector("#fahrenheit").classList.remove("active");
+// }
+
+// document.querySelector("#search-form").addEventListener("submit", resetUnits);
+
+// function showCelsius(event) {
+//   event.preventDefault();
+//   celsius.classList.add("active");
+//   fahrenheit.classList.remove("active");
+//   let temperatureElement = document.querySelector("#temperature");
+//   temperatureElement.innerHTML = Math.round(celsiusTemperature);
+// }
+
+// let celsiusTemperature = null;
 
 function handleSubmit(event) {
   event.preventDefault();
