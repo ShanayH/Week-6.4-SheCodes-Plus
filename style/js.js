@@ -46,16 +46,16 @@ function formatDay(timestamp) {
 
 //change h1 to the city that has been searched for
 
-function search(event) {
-  event.preventDefault();
-  //#city is the h1 (Regina)
-  let searchCity = document.querySelector("#city");
-  let searchBar = document.querySelector("#search-bar").value;
+// function search(event) {
+//   event.preventDefault();
+//   //#city is the h1 (Regina)
+//   let searchCity = document.querySelector("#city");
+//   let searchBar = document.querySelector("#search-bar").value;
 
-  searchCity.innerHTML = `${searchBar}`;
-  let weatherUrl = `https://api.openweathermap.org/data/2.5/weather?q=${searchBar}&APPID=${apiKey}&units=${units}`;
-  axios.get(weatherUrl).then(showTemp);
-}
+//   searchCity.innerHTML = `${searchBar}`;
+//   let weatherUrl = `https://api.openweathermap.org/data/2.5/weather?q=${searchBar}&APPID=${apiKey}&units=${units}`;
+//   axios.get(weatherUrl).then(showTemp);
+// }
 
 let citySearch = document.querySelector("#search-button");
 citySearch.addEventListener("click", search);
@@ -155,6 +155,10 @@ function search(city) {
 
   let url = `https://api.openweathermap.org/data/2.5/weather?q=${city}&APPID=${apiKey}&units=${units}`;
 
+  let searchCity = document.querySelector("#city");
+  console.log(searchCity);
+  searchCity.innerHTML = city;
+
   axios.get(url).then(showTemp);
 }
 
@@ -227,8 +231,8 @@ function handleSubmit(event) {
 let form = document.querySelector("#search-form");
 form.addEventListener("submit", handleSubmit);
 
-let fahrenheit = document.querySelector("#fahrenheit");
-fahrenheit.addEventListener("click", showFahrenheit);
+// let fahrenheit = document.querySelector("#fahrenheit");
+// fahrenheit.addEventListener("click", showFahrenheit);
 
-let celsius = document.querySelector("#celsius");
-celsius.addEventListener("click", showCelsius);
+// let celsius = document.querySelector("#celsius");
+// celsius.addEventListener("click", showCelsius);
