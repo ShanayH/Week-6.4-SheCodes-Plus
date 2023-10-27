@@ -1,3 +1,8 @@
+.units a .active {
+  text-decoration: none;
+  color: red;
+}
+
 body {
   font-family: "Roboto", sans-serif;
   margin-top: 40px;
@@ -22,9 +27,14 @@ hr {
   width: 65%;
   color: #a5c8e8;
 }
-
-a:hover {
+/* .link {
+  text-decoration: none;
   color: #a5c8e8;
+} */
+
+.link:hover {
+  text-decoration: underline;
+  color: red;
 }
 
 .card-body {
@@ -81,15 +91,8 @@ a:hover {
   font-size: 15px;
   float: top, right;
   padding: 2px;
-}
-
-#fahrenheit {
   text-decoration: none;
 }
-/* .active {
-  text-decoration: none;
-  color: black;
-} */
 
 .temperature {
   margin-left: 10px;
