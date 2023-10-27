@@ -64,11 +64,8 @@ let apiKey = "2f4a61b0876133218968273ba29696cf";
 function search(city) {
   let apiKey = "2f4a61b0876133218968273ba29696cf";
   let units = "metric";
-
   let url = `https://api.openweathermap.org/data/2.5/weather?q=${city}&APPID=${apiKey}&units=${units}`;
-
   let searchCity = document.querySelector("#city");
-
   searchCity.innerHTML = city;
 
   axios.get(url).then(showTemp);
@@ -122,7 +119,7 @@ function showTemp(response) {
   let forecast = document.querySelector("#forecast");
   forecast.innerHTML = `${Math.round(
     response.data.main.temp_max
-  )} | ${Math.round(response.data.main.temp_min)}`;
+  )}°C | ${Math.round(response.data.main.temp_min)}°C`;
   let humidityElement = document.querySelector("#humidity");
   humidityElement.innerHTML = response.data.main.humidity;
   let windElement = document.querySelector("#wind");
@@ -204,34 +201,14 @@ function showCelsius(event) {
 let celsius = document.querySelector("#celsius");
 celsius.addEventListener("click", showCelsius);
 
-// function resetUnits() {
-//   document.querySelector("#celsius").classList.add("active");
-//   document.querySelector("#fahrenheit").classList.remove("active");
-// }
-
-// document.querySelector("#search-form").addEventListener("submit", resetUnits);
-
-// function showCelsius(event) {
-//   event.preventDefault();
-//   celsius.classList.add("active");
-//   fahrenheit.classList.remove("active");
-//   let temperatureElement = document.querySelector("#temperature");
-//   temperatureElement.innerHTML = Math.round(celsiusTemperature);
-// }
-
-// let celsiusTemperature = null;
+let celsiusTemperature = null;
 
 function handleSubmit(event) {
   event.preventDefault();
   let searchElement = document.querySelector("#search-bar");
   search(searchElement.value);
 }
-
 let form = document.querySelector("#search-form");
 form.addEventListener("submit", handleSubmit);
 
-// let fahrenheit = document.querySelector("#fahrenheit");
-// fahrenheit.addEventListener("click", showFahrenheit);
-
-// let celsius = document.querySelector("#celsius");
-// celsius.addEventListener("click", showCelsius);
+search("Dublin");
