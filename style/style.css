@@ -1,12 +1,15 @@
-.units a .active {
+.units a {
   text-decoration: none;
-  color: red;
+  color: black;
+}
+a:hover {
+  text-decoration: underline;
 }
 
 body {
   font-family: "Roboto", sans-serif;
   margin-top: 40px;
-  padding: 100px 200px 100px 100px;
+  padding: 0px 200px 0px 100px;
   background: linear-gradient(
     180.3deg,
     rgb(110, 136, 161) 5%,
